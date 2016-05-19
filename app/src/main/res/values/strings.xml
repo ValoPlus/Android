@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">valo+</string>
+    <string name="action_settings">Settings</string>
+
+    // Titles
+    <string name="title_add_controller_1">Add new Controller</string>
+    <string name="title_add_controller_2">Channels of Controller</string>
+    <string name="title_add_controller_channel_detail">Add Channel</string>
+
+    // Label
+    <string name="label_controller_ip">The connection IP for the controller</string>
+    <string name="label_controller_key">The controller-key to authenticate</string>
+    <string name="label_controller_name">Name for the controller</string>
+
+    <string name="label_channel_name">Name for the Channel</string>
+    <string name="label_channel_type">Type of the channel</string>
+    <string name="label_channel_id">The pin of the channel</string>
+    <string name="label_channel_led_count">The count of connected channels</string>
+    <string name="label_channel_red">The pin of the red channel</string>
+    <string name="label_channel_green">The pin of the green channel</string>
+    <string name="label_channel_blue">The pin of the blue channel</string>
+
+    <string name="label_wlan_info">If you access the controller over an access point, you should connect the controller with your WLAN.</string>
+    <string name="label_wlan_ssid">The name (SSID) of the WLAN</string>
+    <string name="label_wlan_key">The key for the WLAN</string>
+
+    // Buttons
+    <string name="button_next">Next</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_add">Add</string>
+    <string name="button_save">Save</string>
+    <string name="title_activity_add_controller2">Add channel details</string>
+
+    <string name="button_switch_state_on">turn off</string>
+    <string name="button_switch_state_off">turn on</string>
+</resources>
