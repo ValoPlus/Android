@@ -3,6 +3,7 @@ package com.valoplus.android.service.rest
 import de.valoplus.channel.Channel
 import de.valoplus.controller.Status
 import de.valoplus.dto.*
+import de.valoplus.wlan.Wlan
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -15,8 +16,8 @@ interface ValoPlusRestClient {
     @GET("/api/settings")
     fun getSettings(@Query("clientId") clientId: String): Call<ControllerResponseDTO>
 
-    @POST("/api/settings")
-    fun postSettings(@Body body: ControllerRequestDTO): Call<ResponseBody>
+    @POST("/api/settings/wlan")
+    fun postSettings(@Body body: Wlan): Call<ResponseBody>
 
     @POST("/api/init")
     fun postInit(@Body init: InitRequestDTO): Call<InitResponseDTO>

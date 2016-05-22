@@ -40,9 +40,7 @@ class ControllerConfigurationProcessWlan internal constructor(private val onSucc
     override fun validate() {
         val client = RetrofitClient.getValoPlusClientForUrl(controller.controllerIp!!)
 
-        val dto = ControllerRequestDTO(controller.wlan!!, controller.controllerAlias!!, clientId!!)
-
-        client.postSettings(dto).enqueue(object : Callback<ResponseBody> {
+        client.postSettings(controller.wlan!!).enqueue(object : Callback<ResponseBody> {
             override fun onFailure(call: Call<ResponseBody>?, t: Throwable?) {
                 onError(t?.message!!)
             }
