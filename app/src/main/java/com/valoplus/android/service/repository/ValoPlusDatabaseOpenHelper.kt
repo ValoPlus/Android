@@ -34,7 +34,7 @@ class ValoPlusDatabaseOpenHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "M
                 "available_channel" to INTEGER + NOT_NULL,
                 "type" to TEXT + NOT_NULL)
 
-        db.createTable(LastControllerRepo.Names.TBL.rep, false,
+        db.createTable(LastControllerRepo.Names.TBL.rep, true,
                 LastControllerRepo.Names.IP.rep to TEXT + PRIMARY_KEY + UNIQUE,
                 LastControllerRepo.Names.KEY.rep to TEXT + PRIMARY_KEY + UNIQUE)
 

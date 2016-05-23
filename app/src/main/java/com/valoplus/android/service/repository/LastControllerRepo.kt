@@ -2,10 +2,7 @@ package com.valoplus.android.service.repository
 
 import android.content.Context
 import de.valoplus.controller.Controller
-import org.jetbrains.anko.db.MapRowParser
-import org.jetbrains.anko.db.insert
-import org.jetbrains.anko.db.parseSingle
-import org.jetbrains.anko.db.select
+import org.jetbrains.anko.db.*
 
 /**
  * Created by tom on 22.05.16.
@@ -25,18 +22,18 @@ class LastControllerRepo(val context: Context) {
         var result = Pair("", "");
         context.database.use {
             select(Names.TBL.rep).exec {
-                result = parseSingle(object : MapRowParser<Pair<String, String>> {
+                result = parseList(object : MapRowParser<Pair<String, String>> {
                     override fun parseRow(columns: Map<String, Any>): Pair<String, String> {
                         return Pair(columns.forKey(Names.IP.rep, String::class), columns.forKey(Names.KEY.rep, String::class))
                     }
-                })
+                }).getOrElse(0, { Pair("", "") })
             }
         }
         return result;
     }
 
     enum class Names(val rep: String) {
-        TBL("lastController"),
+        TBL("lastcontroller"),
 
         IP("ip"),
         KEY("key"),

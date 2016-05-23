@@ -25,9 +25,9 @@ class AddControllerActivity1 : AbstractActivity() {
         button_next.setOnClickListener { v ->
             button_next.isEnabled = false
             val clientId = Settings.Secure.getString(this.contentResolver,
-                                                     Settings.Secure.ANDROID_ID)
+                    Settings.Secure.ANDROID_ID)
 
-            lastController.save(Utils.getInput(input_controller_name), Utils.getInput(input_controller_key))
+            lastController.save(Utils.getInput(input_controller_ip), Utils.getInput(input_controller_key))
 
             ControllerConfigurationProcessFassade
                     .step1({ this.doIntend() }, { this.showError(it) })
@@ -44,13 +44,10 @@ class AddControllerActivity1 : AbstractActivity() {
 
     private fun initDummyData() {
         val last = lastController.get();
-        if("" == last.first) {
-            input_controller_ip.setText("test.valoplus.de:9000")
-            input_controller_key.setText("123456789abc")
-        } else {
-            input_controller_ip.setText(last.first)
-            input_controller_key.setText(last.second)
-        }
+
+        input_controller_ip.setText(last.first)
+        input_controller_key.setText(last.second)
+
         input_controller_name.setText("controller1")
     }
 
