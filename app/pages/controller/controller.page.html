@@ -1,0 +1,13 @@
+<ion-navbar primary *navbar>
+    <ion-title>{{ device.name }}</ion-title>
+</ion-navbar>
+
+<ion-list>
+    <ion-item-sliding *ngFor="let actual of device.channel">
+        <ion-item>
+            <h2>{{ actual.name }}
+                <small> ({{ actual.type }})</small>
+            </h2>
+        </ion-item>
+    </ion-item-sliding>
+</ion-list>

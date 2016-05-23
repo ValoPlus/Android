@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="valoplus" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="node_modules" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/node_modules/valoplus" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/node_modules/valoplus" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

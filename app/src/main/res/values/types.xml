@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="channel_type_array">
-        <item>WS2812</item>
-        <item>RGB Led Leiste</item>
-        <item>Einfahrbige LED Leiste</item>
-    </string-array>
-</resources>

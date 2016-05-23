@@ -1,0 +1,24 @@
+<ion-navbar primary *navbar>
+    <ion-title>Valoplus</ion-title>
+    <ion-buttons end>
+        <button (click)="clickAddDevice()">
+            <ion-icon name="add"></ion-icon>
+            Add Device
+        </button>
+    </ion-buttons>
+</ion-navbar>
+
+<ion-list>
+    <ion-item-sliding *ngFor="let actual of store.controller">
+        <button ion-item style="border-left: 5px green solid;" (click)="clickDevice(actual)">
+            <h2>{{ actual.name }}</h2>
+            <p>0 / {{ actual.channel.length }}</p>
+        </button>
+        <ion-item-options>
+            <button danger (click)="clickDelete(index)">
+                <ion-icon name="trash"></ion-icon>
+                Delete
+            </button>
+        </ion-item-options>
+    </ion-item-sliding>
+</ion-list>
