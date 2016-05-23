@@ -7,9 +7,11 @@ import com.valoplus.android.R
 import com.valoplus.android.activity.basic.AbstractActivity
 import com.valoplus.android.basic.Utils
 import com.valoplus.android.service.add.ControllerConfigurationProcessFassade
+import com.valoplus.android.service.repository.LastControllerRepo
 import kotlinx.android.synthetic.main.activity_add_controller1.*
 
 class AddControllerActivity1 : AbstractActivity() {
+    val lastController = LastControllerRepo(this);
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,10 @@ class AddControllerActivity1 : AbstractActivity() {
         button_next.setOnClickListener { v ->
             button_next.isEnabled = false
             val clientId = Settings.Secure.getString(this.contentResolver,
-                                                     Settings.Secure.ANDROID_ID)
+                    Settings.Secure.ANDROID_ID)
+
+            lastController.save(Utils.getInput(input_controller_ip), Utils.getInput(input_controller_key))
+
             ControllerConfigurationProcessFassade
                     .step1({ this.doIntend() }, { this.showError(it) })
                     .setUrl(Utils.getInput(input_controller_ip))
@@ -38,8 +43,11 @@ class AddControllerActivity1 : AbstractActivity() {
     }
 
     private fun initDummyData() {
-        input_controller_ip.setText("test.valoplus.de:9000")
-        input_controller_key.setText("123456789abc")
+        val last = lastController.get();
+
+        input_controller_ip.setText(last.first)
+        input_controller_key.setText(last.second)
+
         input_controller_name.setText("controller1")
     }
 

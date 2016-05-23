@@ -44,7 +44,7 @@ class ControllerRepo(val context: Context) : AnkoLogger {
                         return Controller(columns.forKey(Names.AVAILABLE_CHANNEL.rep, Long::class),
                                 columns.forKey(Names.TYPE.rep, String::class),
                                 columns.forKey(Names.ALIAS.rep, String::class),
-                                columns.forKey(Names.KEY.rep, String:: class),
+                                columns.forKey(Names.KEY.rep, String::class),
                                 columns.forKey(Names.IP.rep, String::class))
                     }
                 })
