@@ -1,0 +1,46 @@
+<ion-navbar primary *navbar>
+    <ion-title>Add Channel to {{ device.name }}</ion-title>
+</ion-navbar>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Name for the channel</ion-label>
+            <ion-input [(ngModel)]="channel.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Type of the channel</ion-label>
+            <ion-select [(ngModel)]="channel.type">
+                <ion-option [value]="channelTypes.WS2812">WS2812</ion-option>
+                <ion-option [value]="channelTypes.LED_STRIP_RGB">RGB Led Leiste</ion-option>
+                <ion-option [value]="channelTypes.LED_STRIP">Einfahrbige LED Leiste</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="channel.type == channelTypes.WS2812">
+        <ion-item>
+            <ion-label stacked>ID of the Channel</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.channelId"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Count of LEDs</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.ledCount"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngIf="channel.type == channelTypes.LED_STRIP">
+        <ion-item>
+            <ion-label stacked>ID of the Channel</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.channelId"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngIf="channel.type == channelTypes.LED_STRIP_RGB">
+
+    </ion-list>
+</ion-content>
+<ion-toolbar primary position="bottom">
+    <ion-buttons>
+        <button style="width: 100%;" (click)="save()">
+            save
+        </button>
+    </ion-buttons>
+</ion-toolbar>

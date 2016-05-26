@@ -3,7 +3,7 @@ import {RequestOptions, Http, Headers, Response} from "@angular/http";
 import {Observable} from "rxjs/Rx";
 import {RegistrationRequest, RegistrationResponse} from "../../domain/Registration";
 import {Device} from "ionic-native/dist/index";
-import {Channel} from "../../domain/Channel";
+import {Channel} from "../../domain/channel/Channel";
 /**
  * Created by tom on 23.05.16.
  */
@@ -32,6 +32,12 @@ export class ConnectionService {
     getChannel(ip:String):Observable<Channel[]> {
         return this.http.get('http://' + ip + this.channel + '?clientId=test' , this.options)
             .map(this.extractData)
+            .catch(this.handleError)
+    }
+
+    saveChannel(ip:String, channel:Channel):Observable<Channel[]> {
+        return this.http.post('http://' + ip + this.channel , JSON.stringify(channel),this.options)
+            .map(this.extractDataString)
             .catch(this.handleError)
     }
 

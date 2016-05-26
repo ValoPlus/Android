@@ -20,7 +20,7 @@
     <ion-list *ngIf="registrationResponse != null">
         <ion-item>
             <ion-label stacked>Name</ion-label>
-            <ion-input type="text" disabled ngModel="DUMMY"></ion-input>
+            <ion-input type="text" [ngModel]="registrationResponse.controllerAlias" disabled></ion-input>
         </ion-item>
         <ion-item>
             <ion-label stacked>The type of the controller</ion-label>
@@ -33,7 +33,7 @@
     </ion-list>
 </ion-content>
 
-<ion-toolbar primary position="bottom" *ngIf="registrationResponse == null">
+<ion-toolbar primary position="bottom" *ngIf="registrationResponse == null" keyboard-attach class="bar-assertive">
     <ion-buttons>
         <button style="width: 100%;" (click)="clickConnect()">
             Connect
@@ -42,14 +42,14 @@
 </ion-toolbar>
 
 <ion-toolbar primary position="bottom" *ngIf="registrationResponse != null">
-    <ion-buttons start>
+    <ion-buttons start *ngIf="registrationResponse.configured">
         <button (click)="clickAdd()">
             Add
         </button>
     </ion-buttons>
     <ion-buttons end>
-        <button>
-            Reconfigure
+        <button (click)="clickConfigure()">
+            Configure
         </button>
     </ion-buttons>
 </ion-toolbar>

@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa683f70-2830-42dc-a35b-8424f2481c80" name="Default" comment="" />
+    <list default="true" id="fa683f70-2830-42dc-a35b-8424f2481c80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/domain/Wlan.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/domain/channel/ChannelTypes.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/connect/settings.wizard.page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/connect/settings.wizard.page.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/domain/Channel.ts" afterPath="$PROJECT_DIR$/app/domain/channel/Channel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/resources/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="$PROJECT_DIR$/resources/splash.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/valoplus.xml" afterPath="$PROJECT_DIR$/.idea/libraries/valoplus.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/domain/Controller.ts" afterPath="$PROJECT_DIR$/app/domain/Controller.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/domain/Registration.ts" afterPath="$PROJECT_DIR$/app/domain/Registration.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/connect/init.wizard.page.html" afterPath="$PROJECT_DIR$/app/pages/connect/init.wizard.page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts" afterPath="$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/controller/controller.page.html" afterPath="$PROJECT_DIR$/app/pages/controller/controller.page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/controller/controller.page.ts" afterPath="$PROJECT_DIR$/app/pages/controller/controller.page.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/start/start.html" afterPath="$PROJECT_DIR$/app/pages/start/start.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/service/connection/connection.service.ts" afterPath="$PROJECT_DIR$/app/service/connection/connection.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    </list>
     <ignored path="valoplus.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +87,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.ios.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/theme/app.ios.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="icon-small@3x.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -40,6 +104,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -47,21 +114,29 @@
         <option value="$PROJECT_DIR$/app/pages/connect/init.wizzard.page.html" />
         <option value="$PROJECT_DIR$/app/pages/connect/init.wizzard.page.ts" />
         <option value="$PROJECT_DIR$/app/theme/app.variables.scss" />
-        <option value="$PROJECT_DIR$/app/domain/Registration.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/app/domain/Channel.ts" />
         <option value="$PROJECT_DIR$/app/service/store.service.ts" />
-        <option value="$PROJECT_DIR$/app/service/connection/connection.service.ts" />
-        <option value="$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts" />
         <option value="$PROJECT_DIR$/app/pages/start/start.ts" />
-        <option value="$PROJECT_DIR$/app/pages/start/start.html" />
-        <option value="$PROJECT_DIR$/app/domain/Controller.ts" />
-        <option value="$PROJECT_DIR$/app/pages/controller/controller.page.ts" />
-        <option value="$PROJECT_DIR$/app/pages/connect/init.wizard.page.html" />
-        <option value="$PROJECT_DIR$/app/pages/controller/controller.page.html" />
         <option value="$PROJECT_DIR$/app/app.ts" />
         <option value="$PROJECT_DIR$/app/theme/app.ios.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/domain/Registration.ts" />
+        <option value="$PROJECT_DIR$/app/pages/connect/init.wizard.page.html" />
+        <option value="$PROJECT_DIR$/app/domain/Wlan.ts" />
+        <option value="$PROJECT_DIR$/app/pages/connect/settings.wizard.page.ts" />
+        <option value="$PROJECT_DIR$/app/pages/connect/settings.wizard.page.html" />
+        <option value="$PROJECT_DIR$/app/pages/start/start.html" />
+        <option value="$PROJECT_DIR$/app/domain/Channel.ts" />
+        <option value="$PROJECT_DIR$/app/domain/channel/ChannelTypes.ts" />
+        <option value="$PROJECT_DIR$/app/domain/Controller.ts" />
+        <option value="$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts" />
+        <option value="$PROJECT_DIR$/app/service/connection/connection.service.ts" />
+        <option value="$PROJECT_DIR$/app/pages/controller/controller.page.html" />
+        <option value="$PROJECT_DIR$/app/pages/controller/controller.page.ts" />
+        <option value="$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.html" />
+        <option value="$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.ts" />
+        <option value="$PROJECT_DIR$/app/domain/channel/Channel.ts" />
       </list>
     </option>
   </component>
@@ -82,26 +157,7 @@
     <option name="width" value="1920" />
     <option name="height" value="2080" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>AngularJS</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>AngularJS</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -127,6 +183,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,6 +213,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -325,6 +396,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="channel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="connect" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -347,15 +444,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valoplus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="channel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../valoplus" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/ionic-native" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -363,7 +481,14 @@
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/app/domain/channel" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/app/pages/controller/channel" />
+      <recent name="$PROJECT_DIR$/app/pages/connect" />
       <recent name="$PROJECT_DIR$/www" />
     </key>
   </component>
@@ -425,9 +550,6 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fa683f70-2830-42dc-a35b-8424f2481c80" name="Default" comment="" />
@@ -439,12 +561,13 @@
       <workItem from="1463944001414" duration="34000" />
       <workItem from="1463944078788" duration="11915000" />
       <workItem from="1464021521107" duration="888000" />
-      <workItem from="1464024187266" duration="6028000" />
+      <workItem from="1464024187266" duration="17035000" />
+      <workItem from="1464292976898" duration="337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19008000" />
+    <option name="totallyTimeSpent" value="30352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1920" height="2080" extended-state="0" />
@@ -455,18 +578,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32997987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -487,55 +610,263 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/build/js/app.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hooks/after_prepare/010_add_platform_class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hooks/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/page1/page1.html" />
+    <entry file="file://$PROJECT_DIR$/app/service/store.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/theme/app.wp.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/theme/app.md.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/theme/app.core.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/theme/app.ios.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <marker date="1464029461000" expanded="true" signature="7:185" ph="..." />
-            <marker date="1464029461000" expanded="true" signature="193:348" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="369:659" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="435:657" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="469:651" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="477:613" ph="//..." />
-          </folding>
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.io-config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/domain/Registration.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/domain/Wlan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/domain/channel/ChannelTypes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/connect/settings.wizard.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/domain/Controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/pages/connect/init.wizard.page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <marker date="1464028261000" expanded="true" signature="20:170" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="86:155" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="185:1352" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="200:687" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="219:426" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="445:671" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="740:1337" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="759:900" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="919:1114" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1133:1321" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1430:1583" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1448:1568" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1473:1485" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1511:1549" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1661:1891" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1685:1776" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1723:1757" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1798:1876" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1815:1857" ph="..." />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png">
+    <entry file="file://$PROJECT_DIR$/app/pages/start/start.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/connect/settings.wizard.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="85" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/connection/connection.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/start/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="31" selection-start-line="16" selection-start-column="12" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/controller/controller.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/controller/controller.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-40.png">
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/controller/channel/add.channel.page.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/domain/channel/Channel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/splash.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -545,442 +876,64 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/tabs/tabs.html" />
-    <entry file="file://$PROJECT_DIR$/app/pages/tabs/tabs.ts" />
-    <entry file="file://$PROJECT_DIR$/app/pages/page1/page1.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/page1/page1.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/app.variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@angular/router/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="35" selection-start-line="20" selection-start-column="2" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/cordova.js" />
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-          <folding>
-            <marker date="1464024504000" expanded="true" signature="200:1565" ph="..." />
-            <marker date="1464024504000" expanded="true" signature="674:724" ph="..." />
-            <marker date="1464024504000" expanded="true" signature="748:835" ph="..." />
-            <marker date="1464024504000" expanded="true" signature="1132:1212" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platforms/ios/valoplus.xcodeproj/project.pbxproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1463931501000" expanded="true" signature="0:365" ph="{&quot;compileOnSave&quot;: false...}" />
-            <marker date="1463931501000" expanded="true" signature="23:145" ph="{&quot;target&quot;: &quot;es5&quot;...}" />
-            <marker date="1463931501000" expanded="true" signature="162:207" ph="[...]" />
-            <marker date="1463931501000" expanded="true" signature="222:291" ph="[...]" />
-            <marker date="1463931501000" expanded="true" signature="329:363" ph="{&quot;rewriteTsconfig&quot;: false...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1463931501000" expanded="true" signature="0:142" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="74:140" ph="{&quot;es6-shim&quot;: &quot;registry:dt/es6-shim##0.31.2+20160317120654&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding>
-            <marker date="1464018999000" expanded="true" signature="0:1259" ph="{&quot;name&quot;: &quot;valoplus&quot;...}" />
-            <marker date="1464018999000" expanded="true" signature="20:523" ph="{&quot;@angular/common&quot;: &quot;^2.0.0-rc.1&quot;...}" />
-            <marker date="1464018999000" expanded="true" signature="546:854" ph="{&quot;del&quot;: &quot;2.2.0&quot;...}" />
-            <marker date="1464018999000" expanded="true" signature="876:1067" ph="[...]" />
-            <marker date="1464018999000" expanded="true" signature="1091:1188" ph="[...]" />
-            <marker date="1464018999000" expanded="true" signature="1108:1184" ph="{&quot;platform&quot;: &quot;ios&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1464020438000" expanded="true" signature="0:84" ph="{&quot;name&quot;: &quot;valoplus&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.io-config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="3" selection-start-line="63" selection-start-column="3" selection-end-line="63" selection-end-column="3" />
-          <folding>
-            <marker date="1463931501000" expanded="true" signature="163:307" ph="/** Ionic hooks ...*/" />
-            <marker date="1463931501000" expanded="true" signature="646:943" ph="/** Ionic Gulp tasks, for more information on each see ...*/" />
-            <marker date="1463931501000" expanded="true" signature="1307:1588" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1380:1581" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1636:1927" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1709:1920" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1733:1896" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1789:1828" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1853:1888" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2085:2115" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/build/js/app.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hooks/after_prepare/010_add_platform_class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1463931501000" expanded="true" signature="21:368" ph="//..." />
-            <marker date="1463931501000" expanded="true" signature="504:1707" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="556:1661" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="987:1334" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1340:1489" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1671:1705" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1736:1834" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1765:1822" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1868:1989" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="1915:1977" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2004:2734" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2220:2731" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2281:2679" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2393:2487" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2493:2577" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2614:2672" ph="{...}" />
-            <marker date="1463931501000" expanded="true" signature="2689:2727" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hooks/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/domain/Registration.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <marker date="1464018820000" expanded="false" signature="48:86" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464018820000" expanded="true" signature="125:233" ph="{...}" />
-            <marker date="1464018820000" expanded="true" signature="224:231" ph="{...}" />
-            <marker date="1464018820000" expanded="true" signature="269:384" ph="{...}" />
-            <marker date="1464018820000" expanded="true" signature="375:382" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/domain/Channel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1464028683000" expanded="false" signature="0:38" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464028683000" expanded="true" signature="61:146" ph="{...}" />
-            <marker date="1464028683000" expanded="true" signature="136:144" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-667h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/connection/connection.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-          <folding>
-            <marker date="1464029013000" expanded="true" signature="7:327" ph="..." />
-            <marker date="1464029013000" expanded="false" signature="328:366" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464029013000" expanded="true" signature="417:2248" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="563:771" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="599:698" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="872:1050" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1100:1273" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1279:1524" ph="//..." />
-            <marker date="1464029013000" expanded="true" signature="1570:1740" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1602:1676" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1780:1950" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1812:1886" ph="{...}" />
-            <marker date="1464029013000" expanded="true" signature="1987:2246" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-736h.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/start/start.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="15" />
-          <folding>
-            <marker date="1464029906000" expanded="true" signature="7:244" ph="..." />
-            <marker date="1464029906000" expanded="false" signature="245:283" ph="/** Created by tom on 22.05.16. ...*/" />
-            <marker date="1464029906000" expanded="true" signature="291:343" ph="{...}" />
-            <marker date="1464029906000" expanded="true" signature="368:742" ph="{...}" />
-            <marker date="1464029906000" expanded="true" signature="441:449" ph="{...}" />
-            <marker date="1464029906000" expanded="true" signature="472:563" ph="{...}" />
-            <marker date="1464029906000" expanded="true" signature="589:653" ph="{...}" />
-            <marker date="1464029906000" expanded="true" signature="685:740" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/connect/init.wizard.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="30" selection-start-line="9" selection-start-column="0" selection-end-line="13" selection-end-column="30" />
-          <folding>
-            <marker date="1464030003000" expanded="true" signature="7:349" ph="..." />
-            <marker date="1464030003000" expanded="false" signature="350:388" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464030003000" expanded="true" signature="396:496" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="527:1655" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="876:945" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="966:1276" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="1293:1600" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="1379:1497" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="1614:1653" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-40@3x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/domain/Controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <marker date="1464030003000" expanded="false" signature="35:73" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464030003000" expanded="true" signature="95:184" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="175:182" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/start/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="23" selection-start-line="11" selection-start-column="4" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <marker date="1464029906000" expanded="true" signature="27:248" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="85:234" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="129:215" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="260:769" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="323:757" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="357:386" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="417:525" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="552:733" ph="..." />
-            <marker date="1464029906000" expanded="true" signature="609:705" ph="..." />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-40.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/page1/page1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-83.5@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/controller/controller.page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1464030123000" expanded="true" signature="7:100" ph="..." />
-            <marker date="1464030123000" expanded="false" signature="101:139" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464030123000" expanded="true" signature="147:213" ph="{...}" />
-            <marker date="1464030123000" expanded="true" signature="243:359" ph="{...}" />
-            <marker date="1464030123000" expanded="true" signature="308:357" ph="{...}" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/connect/init.wizard.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="4" selection-end-column="18" />
-          <folding>
-            <marker date="1464028261000" expanded="true" signature="20:170" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="86:155" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="185:1352" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="200:687" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="219:426" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="445:671" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="740:1337" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="759:900" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="919:1114" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1133:1321" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1430:1583" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1448:1568" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1473:1485" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1511:1549" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1661:1891" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1685:1776" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1723:1757" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1798:1876" ph="..." />
-            <marker date="1464028261000" expanded="true" signature="1815:1857" ph="..." />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/controller/controller.page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <marker date="1464031280000" expanded="true" signature="27:86" ph="..." />
-            <marker date="1464031280000" expanded="true" signature="98:338" ph="..." />
-            <marker date="1464031280000" expanded="true" signature="159:326" ph="..." />
-            <marker date="1464031280000" expanded="true" signature="178:302" ph="..." />
-            <marker date="1464031280000" expanded="true" signature="195:282" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/service/store.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <marker date="1464030003000" expanded="false" signature="45:83" ph="/** Created by tom on 23.05.16. ...*/" />
-            <marker date="1464030003000" expanded="true" signature="112:209" ph="{...}" />
-            <marker date="1464030003000" expanded="true" signature="170:207" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <marker date="1464029461000" expanded="true" signature="7:185" ph="..." />
-            <marker date="1464029461000" expanded="true" signature="193:348" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="369:659" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="435:657" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="469:651" ph="{...}" />
-            <marker date="1464029461000" expanded="true" signature="477:613" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/app.wp.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/app.md.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/app.core.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <marker date="1464020437000" expanded="true" signature="41:1095" ph="..." />
-            <marker date="1464020437000" expanded="true" signature="48:522" ph="..." />
-            <marker date="1464020437000" expanded="true" signature="529:1087" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/theme/app.ios.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

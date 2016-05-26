@@ -1,13 +1,26 @@
 <ion-navbar primary *navbar>
     <ion-title>{{ device.name }}</ion-title>
+    <ion-buttons end>
+        <button (click)="clickAddChannel()">
+            <ion-icon name="add"></ion-icon>
+            Add Channel
+        </button>
+    </ion-buttons>
 </ion-navbar>
-
-<ion-list>
-    <ion-item-sliding *ngFor="let actual of device.channel">
-        <ion-item>
-            <h2>{{ actual.name }}
-                <small> ({{ actual.type }})</small>
-            </h2>
-        </ion-item>
-    </ion-item-sliding>
-</ion-list>
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let actual of device.channel">
+            <ion-item>
+                <h2>{{ actual.name }}
+                    <small> ({{ actual.type }})</small>
+                </h2>
+            </ion-item>
+            <ion-item-options>
+                <button danger (click)="clickDelete(actual)">
+                    <ion-icon name="trash"></ion-icon>
+                    Delete
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

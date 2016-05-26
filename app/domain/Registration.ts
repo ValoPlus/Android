@@ -11,6 +11,8 @@ export class RegistrationRequest {
 
 export class RegistrationResponse {
     constructor(public controllerType:String = "",
-                public availableChannel:String = "") {
+                public availableChannel:String = "",
+                public controllerAlias: String = "",
+                public configured: Boolean = false) {
     }
 }

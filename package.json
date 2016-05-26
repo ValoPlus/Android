@@ -40,7 +40,8 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
-    }
+    },
+    "android"
   ],
   "name": "valoplus",
   "description": "valoplus: An Ionic project"

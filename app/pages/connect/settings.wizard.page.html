@@ -1,0 +1,33 @@
+<ion-toolbar primary>
+    <ion-title>Settings of device</ion-title>
+    <ion-buttons start>
+        <button (click)="close()">Cancel</button>
+    </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Alias for the controller</ion-label>
+            <ion-input type="text" [(ngModel)]="alias"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>SSID</ion-label>
+            <ion-input type="text" [(ngModel)]="wlan.ssid"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>WLAN-Key</ion-label>
+            <ion-input type="password" [(ngModel)]="wlan.key"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-toolbar primary position="bottom">
+    <ion-buttons>
+        <button style="width: 100%;" (click)="save()">
+            save
+        </button>
+    </ion-buttons>
+</ion-toolbar>
