@@ -4,6 +4,8 @@ import {RegistrationRequest, RegistrationResponse} from "../../domain/Registrati
 import {StoreService} from "../../service/store.service";
 import {Device} from "../../domain/Controller";
 import {SettingsWizardPage} from "./settings.wizard.page";
+import {DatastoreService} from "../../service/datastore/datastore.service";
+import {Connection} from "../../domain/Connection";
 /**
  * Created by tom on 23.05.16.
  */
@@ -15,13 +17,20 @@ import {SettingsWizardPage} from "./settings.wizard.page";
 export class InitWizzardPage {
     public registrationRequest:RegistrationRequest;
     public registrationResponse:RegistrationResponse;
-    public ip:String = 'test.valoplus.de';
+    public ip:String = 'valoplus.de';
 
     constructor(private viewCtrl:ViewController,
                 private connectionService:ConnectionService,
                 private nav:NavController,
-                private store:StoreService) {
+                private store:StoreService,
+                private datastoreService: DatastoreService) {
         this.registrationRequest = new RegistrationRequest();
+        datastoreService.getLastConnection(last => {
+            if(last != null) {
+                this.ip = last.ip;
+                this.registrationRequest.key = last.key;
+            }
+        });
     }
 
     clickConnect() {
@@ -29,7 +38,8 @@ export class InitWizzardPage {
         this.connectionService.requestRegistration(this.registrationRequest, this.ip).subscribe(
             result => this.registrationResponse = result,
             error => this.nav.present(Toast.create({message: error, duration: 3000}))
-        )
+        );
+        this.datastoreService.saveLastConnection(new Connection(this.registrationRequest.key, this.ip));
     }
 
     clickAdd() {
