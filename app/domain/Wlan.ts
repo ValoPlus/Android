@@ -4,6 +4,6 @@
 
 export class Wlan {
     constructor(public ssid:String = "",
-                public key:String = "") {
+                public pass:String = "") {
     }
 }

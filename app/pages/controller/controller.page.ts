@@ -2,6 +2,7 @@ import {Page, NavParams, NavController, Toast} from "ionic-angular/index";
 import {Device} from "../../domain/Controller";
 import {AddChannelPage} from "./channel/add.channel.page";
 import {Channel} from "../../domain/channel/Channel";
+import {DetailChannelPage} from "./channel/detail.channel.page";
 /**
  * Created by tom on 23.05.16.
  */
@@ -18,6 +19,10 @@ export class ControllerPage {
 
     clickAddChannel() {
         this.nav.push(AddChannelPage, {device: this.device});
+    }
+    
+    clickChannel(channel:Channel) {
+        this.nav.push(DetailChannelPage, {device: this.device, channel: channel})
     }
 
     clickDelete(channel:Channel) {

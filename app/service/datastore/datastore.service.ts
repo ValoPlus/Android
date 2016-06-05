@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Connection} from "../../domain/Connection";
+import {Device} from "ionic-native/dist/index";
 //noinspection TypeScriptUnresolvedFunction
 /**
  * Created by tom on 28.05.16.
@@ -9,12 +10,20 @@ let PouchDB = require('pouchdb');
 
 @Injectable()
 export class DatastoreService {
-    private _dbController;
+    private _dbDevice;
     private _dbLastConnection;
 
     initDB() {
-        this._dbController = new PouchDB('controller', {adapter: 'websql'});
+        this._dbDevice = new PouchDB('device', {adapter: 'websql'});
         this._dbLastConnection = new PouchDB('lastConnection', {adapter: 'websql'});
+    }
+    
+    saveDevice(device:Device) {
+        this._dbDevice.post(device);
+    }
+    
+    removeDevice(id:string, rev:String) {
+        this._dbDevice.remove(id, rev);
     }
 
     getLastConnection(onLoad:(Connection) => void) {
@@ -30,6 +39,14 @@ export class DatastoreService {
             return this._dbLastConnection.put(doc);
         }).catch(error => {
             this._dbLastConnection.put(connection);
+        });
+    }
+
+    getAll(forEachCallback:(Device) => void) {
+        return this._dbDevice.allDocs({include_docs: true}).then(result => {
+            result.rows.forEach(device => {
+                forEachCallback(device.doc);
+            })
         });
     }
 }

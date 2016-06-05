@@ -5,12 +5,16 @@
             <ion-icon name="add"></ion-icon>
             Add Channel
         </button>
+        <button (click)="clickAddChannel()">
+            <ion-icon name="settings"></ion-icon>
+            Settings
+        </button>
     </ion-buttons>
 </ion-navbar>
 <ion-content>
     <ion-list>
         <ion-item-sliding *ngFor="let actual of device.channel">
-            <ion-item>
+            <ion-item (click)="clickChannel(actual)">
                 <h2>{{ actual.name }}
                     <small> ({{ actual.type }})</small>
                 </h2>

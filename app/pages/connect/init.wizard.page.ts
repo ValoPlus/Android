@@ -45,7 +45,7 @@ export class InitWizzardPage {
     clickAdd() {
         this.connectionService.getChannel(this.ip).subscribe(
             result => {
-                this.store.controller.push(new Device(this.registrationResponse.controllerAlias, this.ip, result));
+                this.store.add(new Device(this.registrationResponse.controllerAlias, this.ip, result));
                 this.close();
             },
             error => this.nav.present(Toast.create({message: error, duration: 3000}))
@@ -53,8 +53,13 @@ export class InitWizzardPage {
     }
 
     clickConfigure() {
-        let modal = Modal.create(SettingsWizardPage);
-        this.nav.present(modal, {animate: false});
+        this.connectionService.getChannel(this.ip).subscribe(
+            result => {
+                let modal = Modal.create(SettingsWizardPage, {device: new Device(this.registrationResponse.controllerAlias, this.ip, result)});
+                this.nav.present(modal, {animate: false});
+            },
+            error => this.nav.present(Toast.create({message: error, duration: 3000}))
+        );
     }
 
     close() {

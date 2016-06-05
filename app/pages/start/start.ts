@@ -24,6 +24,6 @@ export class StartPage {
     }
 
     clickDelete(index:number) {
-        this.store.controller.splice(index, 1);
+        this.store.remove(index);
     }
 }

@@ -9,13 +9,13 @@
 </ion-navbar>
 <ion-content>
     <ion-list>
-        <ion-item-sliding *ngFor="let actual of store.controller">
+        <ion-item-sliding *ngFor="let actual of store.controller; let i = index">
             <button ion-item style="border-left: 5px green solid;" (click)="clickDevice(actual)">
                 <h2>{{ actual.name }}</h2>
                 <p>0 / {{ actual.channel.length }}</p>
             </button>
             <ion-item-options>
-                <button danger (click)="clickDelete(index)">
+                <button danger (click)="clickDelete(i)">
                     <ion-icon name="trash"></ion-icon>
                     Delete
                 </button>
