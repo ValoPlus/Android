@@ -4,8 +4,9 @@ import {StartPage} from "../start/start";
 import {Wlan} from "../../domain/Wlan";
 import {Device} from "../../domain/Controller";
 import {StoreService} from "../../service/store.service";
+import {Component} from "@angular/core";
 
-@Page({
+@Component({
     templateUrl: 'build/pages/connect/settings.wizard.page.html',
     providers: [ConnectionService]
 })
@@ -36,7 +37,7 @@ export class SettingsWizardPage {
         );
     }
 
-    private error(error:String) {
+    private error(error:string) {
         this.nav.present(Toast.create({message: error, duration: 3000}));
     }
 

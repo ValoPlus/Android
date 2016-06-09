@@ -8,7 +8,7 @@
     "@angular/platform-browser-dynamic": "^2.0.0-rc.1",
     "@angular/router": "^2.0.0-rc.1",
     "es6-shim": "^0.35.0",
-    "ionic-angular": "2.0.0-beta.7",
+    "ionic-angular": "^2.0.0-beta.8",
     "ionic-native": "^1.1.0",
     "ionicons": "3.0.0",
     "pouchdb": "^5.3.2",
@@ -34,7 +34,15 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
-    "cordova-plugin-sqlite-2"
+    "cordova-plugin-sqlite-2",
+    {
+      "variables": {
+        "SENDER_ID": "GCM_PROJECT_NUMBER"
+      },
+      "locator": "phonegap-plugin-push",
+      "id": "phonegap-plugin-push"
+    },
+    "ionic-plugin-deploy"
   ],
   "cordovaPlatforms": [
     "ios",

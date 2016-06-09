@@ -4,15 +4,15 @@ import {Device} from "ionic-native/dist/index";
  */
     
 export class RegistrationRequest {
-    constructor(public key:String = "123456789abc",
-                public clientId:String = '') {
+    constructor(public key:string = "123456789abc",
+                public clientId:string = '') {
     }
 }
 
 export class RegistrationResponse {
-    constructor(public controllerType:String = "",
-                public availableChannel:String = "",
-                public controllerAlias: String = "",
+    constructor(public controllerType:string = "",
+                public availableChannel:string = "",
+                public controllerAlias: string = "",
                 public configured: Boolean = false) {
     }
 }

@@ -28,59 +28,59 @@ export class ConnectionService {
         this.options = new RequestOptions({headers: headers});
     }
 
-    requestRegistration(reqObject:RegistrationRequest, ip:String):Observable<RegistrationResponse> {
+    requestRegistration(reqObject:RegistrationRequest, ip:string):Observable<RegistrationResponse> {
         return this.http.post(this.pre + ip + this.init, JSON.stringify(reqObject), this.options)
             .map(this.extractData)
             .catch(this.handleError)
     }
 
-    saveAlias(alias:String, ip:String):Observable<String> {
+    saveAlias(alias:string, ip:string):Observable<string> {
         return this.http.post(this.pre + ip + this.alias, alias, this.options)
-            .map(this.extractDataString)
+            .map(this.extractDatastring)
             .catch(this.handleError)
     }
 
-    getWlan(ip:String):Observable<Wlan> {
+    getWlan(ip:string):Observable<Wlan> {
         return this.http.get(this.url(ip, this.wlan), this.options)
             .map(this.extractData)
             .catch(this.handleError)
     }
 
-    saveWlan(wlan:Wlan, ip:String):Observable<String> {
+    saveWlan(wlan:Wlan, ip:string):Observable<string> {
         return this.http.post(this.url(ip, this.wlan), JSON.stringify(wlan), this.options)
-            .map(this.extractDataString)
+            .map(this.extractDatastring)
             .catch(this.handleError)
     }
 
-    getChannel(ip:String):Observable<Channel[]> {
+    getChannel(ip:string):Observable<Channel[]> {
         return this.http.get(this.url(ip, this.channel) + '?clientId=test', this.options)
             .map(this.extractData)
             .catch(this.handleError)
     }
 
-    saveChannel(ip:String, channel:Channel):Observable<Channel[]> {
+    saveChannel(ip:string, channel:Channel):Observable<Channel[]> {
         return this.http.post(this.url(ip, this.channel), JSON.stringify(channel), this.options)
-            .map(this.extractDataString)
+            .map(this.extractDatastring)
             .catch(this.handleError)
     }
 
-    deleteChannel(ip:String, name:String):Observable<String> {
+    deleteChannel(ip:string, name:string):Observable<string> {
         return this.http.delete(this.url(ip, this.channel)+ '?channelName = ' + name, this.options)
-            .map(this.extractDataString)
+            .map(this.extractDatastring)
             .catch(this.handleError)
     }
 
-    // requestWlan(reqObject:Wlan, ip:String):Observable<String> {
+    // requestWlan(reqObject:Wlan, ip:string):Observable<string> {
     //     return this.http.post(ip + this.wlan, JSON.stringify(reqObject), this.options)
-    //         .map(this.extractDataString)
+    //         .map(this.extractDatastring)
     //         .catch(this.handleError)
     // }
 
-    private url(ip:String, path:String):String {
+    private url(ip:string, path:string):string {
         return this.pre + ip + path;
     }
 
-    private extractDataString(res:Response) {
+    private extractDatastring(res:Response) {
         if (res.status < 200) {
             throw new Error('Response status: ' + res.status);
         }

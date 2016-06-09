@@ -1,0 +1,24 @@
+<ion-navbar primary *navbar>
+    <ion-title>{{ channel.name }}</ion-title>
+    <ion-buttons end>
+        <button (click)="presentPopover($event)">
+            <ion-icon name="more"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-navbar>
+<ion-content>
+    <ion-list-header>Connected periphery: {{ channel.type }}</ion-list-header>
+    <ion-list>
+        <ion-list-header>Color with {{ channel.state.brightness }}% brightness</ion-list-header>
+        <ion-item [style.background]="getColor()" (click)="clickColor()" class="no-border"></ion-item>
+        <ion-list-header>Advanced</ion-list-header>
+        <ion-item>Effects</ion-item>
+    </ion-list>
+</ion-content>
+<ion-toolbar position="bottom" [color]="channel.state.active ? 'green' : 'darkred'">
+    <ion-buttons >
+        <button class="full-button" (click)="toggle()">
+            turn {{ channel.state.active ? 'on' : 'off'}}
+        </button>
+    </ion-buttons>
+</ion-toolbar>

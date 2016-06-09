@@ -3,7 +3,7 @@
  */
 
 export class Wlan {
-    constructor(public ssid:String = "",
-                public pass:String = "") {
+    constructor(public ssid:string = "",
+                public pass:string = "") {
     }
 }

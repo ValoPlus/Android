@@ -1,13 +1,15 @@
-import {Page, NavParams, NavController, Toast} from "ionic-angular/index";
+import {Page, NavParams, NavController, Toast, Popover} from "ionic-angular/index";
 import {Device} from "../../domain/Controller";
 import {AddChannelPage} from "./channel/add.channel.page";
 import {Channel} from "../../domain/channel/Channel";
 import {DetailChannelPage} from "./channel/detail.channel.page";
+import {Component} from "@angular/core";
+import {DevicePopoverComponent} from "./channel/channel.popover";
 /**
  * Created by tom on 23.05.16.
  */
 
-@Page({
+@Component({
     templateUrl: 'build/pages/controller/controller.page.html'
 })
 export class ControllerPage {
@@ -27,5 +29,16 @@ export class ControllerPage {
 
     clickDelete(channel:Channel) {
         this.nav.present(Toast.create({message: 'TODO', duration: 3000}))
+    }
+    
+    toggle(channel:Channel) {
+        channel.state.active = !channel.state.active;
+    }
+
+    presentPopover(myEvent) {
+        let popover = Popover.create(DevicePopoverComponent);
+        this.nav.present(popover, {
+            ev: myEvent
+        });
     }
 }

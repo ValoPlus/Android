@@ -3,8 +3,8 @@
  */
 export class Connection {
     private _id:String;
-    constructor(public key:String,
-                public ip:String) {
+    constructor(public key:string,
+                public ip:string) {
         this._id = 'last';
     }
 }

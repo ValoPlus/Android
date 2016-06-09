@@ -29,3 +29,11 @@
 // App Material Design Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Material Design app
+
+/*.toggle-icon {
+  background-color: lighten(map-get($colors, 'danger'), 25%);
+}
+
+.toggle-inner {
+  background-color: map-get($colors, 'danger');
+}*/

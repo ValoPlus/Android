@@ -9,26 +9,26 @@
     <ion-list>
         <ion-item>
             <ion-label stacked>The connection IP for the controller</ion-label>
-            <ion-input type="text" [(ngModel)]="ip" [disabled]="registrationResponse != null"></ion-input>
+            <ion-input [(ngModel)]="ip" [disabled]="registrationResponse != null"></ion-input>
         </ion-item>
         <ion-item>
             <ion-label stacked>The controller-key to authenticate</ion-label>
-            <ion-input type="text" [(ngModel)]="registrationRequest.key" [disabled]="registrationResponse != null"></ion-input>
+            <ion-input [(ngModel)]="registrationRequest.key" [disabled]="registrationResponse != null"></ion-input>
         </ion-item>
     </ion-list>
 
     <ion-list *ngIf="registrationResponse != null">
         <ion-item>
             <ion-label stacked>Name</ion-label>
-            <ion-input type="text" [ngModel]="registrationResponse.controllerAlias" disabled></ion-input>
+            <ion-input [ngModel]="registrationResponse.controllerAlias" disabled></ion-input>
         </ion-item>
         <ion-item>
             <ion-label stacked>The type of the controller</ion-label>
-            <ion-input type="text" [ngModel]="registrationResponse.controllerType" disabled></ion-input>
+            <ion-input [ngModel]="registrationResponse.controllerType" disabled></ion-input>
         </ion-item>
         <ion-item>
             <ion-label stacked>Available Channel</ion-label>
-            <ion-input type="text" [ngModel]="registrationResponse.availableChannel" disabled></ion-input>
+            <ion-input [ngModel]="registrationResponse.availableChannel" disabled></ion-input>
         </ion-item>
     </ion-list>
 </ion-content>

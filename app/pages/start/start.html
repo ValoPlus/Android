@@ -10,10 +10,13 @@
 <ion-content>
     <ion-list>
         <ion-item-sliding *ngFor="let actual of store.controller; let i = index">
-            <button ion-item style="border-left: 5px green solid;" (click)="clickDevice(actual)">
-                <h2>{{ actual.name }}</h2>
-                <p>0 / {{ actual.channel.length }}</p>
-            </button>
+            <ion-item>
+                <ion-label (click)="clickDevice(actual)">
+                    <h2>{{ actual.name }}</h2>
+                    <p>{{ getActive(actual) }} active / {{ actual.channel.length }} configured</p>
+                </ion-label>
+                <ion-toggle secondary checked="false" [ngModel]="getActive(actual) == actual.channel.length"></ion-toggle>
+            </ion-item>
             <ion-item-options>
                 <button danger (click)="clickDelete(i)">
                     <ion-icon name="trash"></ion-icon>

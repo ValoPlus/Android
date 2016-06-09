@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Connection} from "../../domain/Connection";
-import {Device} from "ionic-native/dist/index";
+import {Device} from "../../domain/Controller";
 //noinspection TypeScriptUnresolvedFunction
 /**
  * Created by tom on 28.05.16.

@@ -1,23 +1,30 @@
 <ion-navbar primary *navbar>
     <ion-title>{{ device.name }}</ion-title>
     <ion-buttons end>
-        <button (click)="clickAddChannel()">
-            <ion-icon name="add"></ion-icon>
-            Add Channel
+        <button (click)="presentPopover($event)">
+            <ion-icon name="more"></ion-icon>
         </button>
+    </ion-buttons>
+<!--    <ion-buttons end>
         <button (click)="clickAddChannel()">
             <ion-icon name="settings"></ion-icon>
             Settings
         </button>
-    </ion-buttons>
+    </ion-buttons>-->
 </ion-navbar>
 <ion-content>
+    <button fab fab-bottom fab-right (click)="clickAddChannel()">
+        <ion-icon name="add"></ion-icon>
+    </button>
     <ion-list>
         <ion-item-sliding *ngFor="let actual of device.channel">
-            <ion-item (click)="clickChannel(actual)">
-                <h2>{{ actual.name }}
-                    <small> ({{ actual.type }})</small>
-                </h2>
+            <ion-item>
+                <ion-label (click)="clickChannel(actual)">
+                    <h2>{{ actual.name }}
+                        <small> ({{ actual.type }})</small>
+                    </h2>
+                </ion-label>
+                <ion-toggle secondary checked="false" [ngModel]="actual.state.active" (ionChange)="toggle(actual)"></ion-toggle>
             </ion-item>
             <ion-item-options>
                 <button danger (click)="clickDelete(actual)">

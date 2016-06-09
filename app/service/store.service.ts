@@ -1,8 +1,10 @@
 import {Device} from "../domain/Controller";
 import {Injectable} from "@angular/core";
 import {DatastoreService} from "./datastore/datastore.service";
+import {State} from "../domain/channel/State";
 /**
- * Created by tom on 23.05.16.
+ * Service to store all devices and the last connection.
+ * Should be used for every DB access!
  */
 @Injectable()
 export class StoreService {
@@ -11,11 +13,31 @@ export class StoreService {
     constructor(private datastore:DatastoreService) {
         this.controller = [];
     }
-    
+
+    /**
+     * Saves a new Device. The Name must be unique.
+     * @param device
+     * @throws Error if a Device with the same Name exists.
+     */
     add(device:Device) {
-        // TODO Fall behandeln, dass Controller bereits existiert
+        const exist = this.controller.find(actual => actual.name == device.name);
+        if(exist != null) {
+            throw new Error(`A Device with the name ${exist.name} already exists.`);
+        }
+        device.channel.forEach(channel => {
+            channel.state = new State();
+        });
+        
         this.datastore.saveDevice(device);
         this.controller.push(device);
+    }
+
+    /**
+     * Updates the Device. A Device with the same Name should already exist.
+     * @param device
+     */
+    update(device:Device) {
+        // TODO
     }
 
     remove(index:number) {
@@ -25,5 +47,10 @@ export class StoreService {
 
     loadControllerFromDb() {
         this.datastore.getAll(device => this.controller.push(device));
+        this.controller.forEach(device => {
+            device.channel.forEach(channel => {
+                channel.state = new State();
+            });
+        })
     }
 }

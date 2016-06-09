@@ -3,8 +3,9 @@ import {Device} from "../../../domain/Controller";
 import {ConnectionService} from "../../../service/connection/connection.service";
 import {Channel} from "../../../domain/channel/Channel";
 import {ChannelTypes} from "../../../domain/channel/ChannelTypes";
+import {Component} from "@angular/core";
 
-@Page({
+@Component({
     templateUrl: 'build/pages/controller/channel/add.channel.page.html',
     providers: [ConnectionService]
 })

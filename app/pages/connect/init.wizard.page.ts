@@ -1,4 +1,4 @@
-import {Page, ViewController, NavController, Toast, Modal, NavParams} from "ionic-angular/index";
+import {ViewController, NavController, Toast, Modal, NavParams} from "ionic-angular/index";
 import {ConnectionService} from "../../service/connection/connection.service";
 import {RegistrationRequest, RegistrationResponse} from "../../domain/Registration";
 import {StoreService} from "../../service/store.service";
@@ -6,27 +6,30 @@ import {Device} from "../../domain/Controller";
 import {SettingsWizardPage} from "./settings.wizard.page";
 import {DatastoreService} from "../../service/datastore/datastore.service";
 import {Connection} from "../../domain/Connection";
+import {ErrorHandler} from "../abstract/ErrorHandler";
+import {Component} from "@angular/core";
 /**
  * Created by tom on 23.05.16.
  */
 
-@Page({
+@Component({
     templateUrl: 'build/pages/connect/init.wizard.page.html',
     providers: [ConnectionService]
 })
-export class InitWizzardPage {
+export class InitWizzardPage extends ErrorHandler {
     public registrationRequest:RegistrationRequest;
     public registrationResponse:RegistrationResponse;
-    public ip:String = 'valoplus.de';
+    public ip:string = 'test.valoplus.de';
 
     constructor(private viewCtrl:ViewController,
                 private connectionService:ConnectionService,
-                private nav:NavController,
+                nav:NavController,
                 private store:StoreService,
-                private datastoreService: DatastoreService) {
+                private datastoreService:DatastoreService) {
+        super(nav);
         this.registrationRequest = new RegistrationRequest();
         datastoreService.getLastConnection(last => {
-            if(last != null) {
+            if (last != null) {
                 this.ip = last.ip;
                 this.registrationRequest.key = last.key;
             }
@@ -37,7 +40,7 @@ export class InitWizzardPage {
         this.registrationRequest.clientId = 'test';
         this.connectionService.requestRegistration(this.registrationRequest, this.ip).subscribe(
             result => this.registrationResponse = result,
-            error => this.nav.present(Toast.create({message: error, duration: 3000}))
+            error => super.handleErrorString
         );
         this.datastoreService.saveLastConnection(new Connection(this.registrationRequest.key, this.ip));
     }
@@ -45,11 +48,13 @@ export class InitWizzardPage {
     clickAdd() {
         this.connectionService.getChannel(this.ip).subscribe(
             result => {
-                this.store.add(new Device(this.registrationResponse.controllerAlias, this.ip, result));
-                this.close();
-            },
-            error => this.nav.present(Toast.create({message: error, duration: 3000}))
-        )
+                try {
+                    this.store.add(new Device(this.registrationResponse.controllerAlias, this.ip, result));
+                    this.close();
+                } catch (error) {
+                    super.handleError(error);
+                }
+            }, super.handleErrorString);
     }
 
     clickConfigure() {
