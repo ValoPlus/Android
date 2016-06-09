@@ -10,3 +10,5 @@ plugins/
 Thumbs.db
 .idea/
 **.xml
+www/
+resources
