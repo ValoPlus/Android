@@ -2,6 +2,7 @@ import {Device} from "../domain/Controller";
 import {Injectable} from "@angular/core";
 import {DatastoreService} from "./datastore/datastore.service";
 import {State} from "../domain/channel/State";
+import {Doc} from "../domain/Doc";
 /**
  * Service to store all devices and the last connection.
  * Should be used for every DB access!
@@ -37,12 +38,17 @@ export class StoreService {
      * @param device
      */
     update(device:Device) {
-        // TODO
+        this.datastore.updateDevice(device);
     }
 
     remove(index:number) {
         const deletedDevice = this.controller.splice(index, 1);
         this.datastore.removeDevice(deletedDevice[0]._id, deletedDevice[0]._rev);
+    }
+
+    removeByDoc(doc:Doc) {
+        this.controller = this.controller.filter(actual => actual._id != doc._id);
+        this.datastore.removeDevice(doc._id, doc._rev);
     }
 
     loadControllerFromDb() {

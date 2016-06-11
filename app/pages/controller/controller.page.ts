@@ -1,10 +1,14 @@
-import {Page, NavParams, NavController, Toast, Popover} from "ionic-angular/index";
+import {Page, NavParams, NavController, Toast, Popover, Modal} from "ionic-angular/index";
 import {Device} from "../../domain/Controller";
 import {AddChannelPage} from "./channel/add.channel.page";
 import {Channel} from "../../domain/channel/Channel";
 import {DetailChannelPage} from "./channel/detail.channel.page";
 import {Component} from "@angular/core";
 import {DevicePopoverComponent} from "./channel/channel.popover";
+import {PopoverCallback} from "../../util/PopoverCallback";
+import {SettingsWizardPage} from "../connect/settings.wizard.page";
+import {StoreService} from "../../service/store.service";
+import {StartPage} from "../start/start";
 /**
  * Created by tom on 23.05.16.
  */
@@ -15,14 +19,14 @@ import {DevicePopoverComponent} from "./channel/channel.popover";
 export class ControllerPage {
     private device:Device;
 
-    constructor(params: NavParams, private nav:NavController) {
+    constructor(params:NavParams, private nav:NavController, private store:StoreService) {
         this.device = params.data.device;
     }
 
     clickAddChannel() {
         this.nav.push(AddChannelPage, {device: this.device});
     }
-    
+
     clickChannel(channel:Channel) {
         this.nav.push(DetailChannelPage, {device: this.device, channel: channel})
     }
@@ -30,13 +34,24 @@ export class ControllerPage {
     clickDelete(channel:Channel) {
         this.nav.present(Toast.create({message: 'TODO', duration: 3000}))
     }
-    
+
     toggle(channel:Channel) {
         channel.state.active = !channel.state.active;
     }
 
     presentPopover(myEvent) {
-        let popover = Popover.create(DevicePopoverComponent);
+        let popover = Popover.create(DevicePopoverComponent, {
+            callback: <PopoverCallback> {
+                onClickDelete: () => {
+                    this.store.removeByDoc(this.device);
+                    this.nav.setRoot(StartPage);
+                },
+                onClickEdit: () => {
+                    let modal = Modal.create(SettingsWizardPage, {device: this.device});
+                    this.nav.present(modal);
+                }
+            }
+        });
         this.nav.present(popover, {
             ev: myEvent
         });

@@ -19,7 +19,19 @@ export class DatastoreService {
     }
     
     saveDevice(device:Device) {
-        this._dbDevice.post(device);
+        this._dbDevice.post(device).then(doc => {
+            device._id = doc.id;
+            device._rev = doc.rev;
+        });
+    }
+
+    updateDevice(device:Device) {
+        this._dbDevice.put(device).then(doc => {
+            device._id = doc.id;
+            device._rev = doc.rev;
+        }).catch(error => {
+            alert(error);
+        });
     }
     
     removeDevice(id:string, rev:String) {

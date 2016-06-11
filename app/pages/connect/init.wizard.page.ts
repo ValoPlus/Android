@@ -60,7 +60,10 @@ export class InitWizzardPage extends ErrorHandler {
     clickConfigure() {
         this.connectionService.getChannel(this.ip).subscribe(
             result => {
-                let modal = Modal.create(SettingsWizardPage, {device: new Device(this.registrationResponse.controllerAlias, this.ip, result)});
+                const device = new Device(this.registrationResponse.controllerAlias, this.ip, result);
+                this.store.add(device);
+
+                const modal = Modal.create(SettingsWizardPage, {device: device});
                 this.nav.present(modal, {animate: false});
             },
             error => this.nav.present(Toast.create({message: error, duration: 3000}))

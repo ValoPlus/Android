@@ -14,6 +14,8 @@ export class SettingsWizardPage {
     private wlan:Wlan = new Wlan();
     private device:Device;
 
+    // TODO detect wlan change!
+
     constructor(public nav:NavController,
                 private connectionService:ConnectionService,
                 private store:StoreService,
@@ -29,7 +31,7 @@ export class SettingsWizardPage {
         this.connectionService.saveAlias(this.device.name, this.device.ip).subscribe(
             () => {
                 this.connectionService.saveWlan(this.wlan, this.device.ip).subscribe(() => {
-                    this.store.add(this.device);
+                    this.store.update(this.device);
                     this.nav.setRoot(StartPage);
                 }, this.error);
             },

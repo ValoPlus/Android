@@ -1,10 +1,10 @@
 import {Channel} from "./channel/Channel";
-import {DBExtension} from "./DBExtension";
+import {Doc} from "./Doc";
 /**
  * Created by tom on 23.05.16.
  */
 
-export class Device extends DBExtension{
+export class Device extends Doc{
     public name:string;
     public ip:string;
     public channel:Channel[];
