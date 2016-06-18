@@ -1,4 +1,4 @@
-import {Page, NavParams, ViewController, NavController, Toast} from "ionic-angular/index";
+import {NavParams, ViewController, NavController, Toast} from "ionic-angular/index";
 import {Device} from "../../../domain/Controller";
 import {ConnectionService} from "../../../service/connection/connection.service";
 import {Channel} from "../../../domain/channel/Channel";
@@ -10,7 +10,7 @@ import {Component} from "@angular/core";
     providers: [ConnectionService]
 })
 export class AddChannelPage {
-    private device:Device;
+    private device: Device;
     private channel:Channel; 
     private channelTypes:any = ChannelTypes;
     

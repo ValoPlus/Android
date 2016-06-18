@@ -10,9 +10,15 @@ export class RegistrationRequest {
 }
 
 export class RegistrationResponse {
-    constructor(public controllerType:string = "",
-                public availableChannel:string = "",
-                public controllerAlias: string = "",
-                public configured: Boolean = false) {
+    public controllerType:string;
+    public availableChannel:string;
+    public controllerAlias: string;
+    public configured: Boolean;
+
+    constructor(controllerType:string, availableChannel:string, controllerAlias:string, configured:Boolean) {
+        this.controllerType = controllerType;
+        this.availableChannel = availableChannel;
+        this.controllerAlias = controllerAlias;
+        this.configured = configured;
     }
 }

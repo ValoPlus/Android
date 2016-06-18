@@ -4,6 +4,7 @@ import {StartPage} from "./pages/start/start";
 import {StoreService} from "./service/store.service";
 import {DatastoreService} from "./service/datastore/datastore.service";
 import {Component} from "@angular/core";
+import {DeviceService} from './service/device/device.service';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class MyApp {
     }
 }
 
-ionicBootstrap(MyApp, [StoreService, DatastoreService], {
+ionicBootstrap(MyApp, [StoreService, DatastoreService, DeviceService], {
     platforms: {
         ios: {
             statusbarPadding: true

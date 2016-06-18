@@ -5,6 +5,7 @@ import {RegistrationRequest, RegistrationResponse} from "../../domain/Registrati
 import {Device} from "ionic-native/dist/index";
 import {Channel} from "../../domain/channel/Channel";
 import {Wlan} from "../../domain/Wlan";
+import {DeviceService} from '../device/device.service';
 /**
  * Created by tom on 23.05.16.
  */
@@ -20,9 +21,12 @@ export class ConnectionService {
 
     private options:RequestOptions;
 
-    constructor(private http:Http) {
+    private http:Http;
+
+    constructor(http:Http, device:DeviceService) {
+        this.http = http;
         let headers = new Headers({
-            'Authorization': 'test',
+            'Authorization': device.getDeviceId(),
             'Content-Type': 'application/json'
         });
         this.options = new RequestOptions({headers: headers});
@@ -60,6 +64,12 @@ export class ConnectionService {
 
     saveChannel(ip:string, channel:Channel):Observable<Channel[]> {
         return this.http.post(this.url(ip, this.channel), JSON.stringify(channel), this.options)
+            .map(this.extractDatastring)
+            .catch(this.handleError)
+    }
+
+    updateChannel(ip:string, channel:Channel):Observable<Channel[]> {
+        return this.http.put(this.url(ip, this.channel), JSON.stringify(channel), this.options)
             .map(this.extractDatastring)
             .catch(this.handleError)
     }
