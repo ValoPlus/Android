@@ -6,9 +6,8 @@ import {State} from "./State";
 
 export class Channel {
     public state:State = new State();
+    public name:string;
+    public type:string = ChannelTypes[ChannelTypes.WS2812];
+    public typedef:any = {};
 
-    constructor(public name:string = "", 
-                public type:string = ChannelTypes[ChannelTypes.WS2812],
-                public typedef:any = {}) {
-    }
 }

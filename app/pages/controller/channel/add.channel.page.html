@@ -34,7 +34,18 @@
         </ion-item>
     </ion-list>
     <ion-list *ngIf="channel.type == channelTypes.LED_STRIP_RGB">
-
+        <ion-item>
+            <ion-label stacked>ID of the red Channel</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.red"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>ID of the green Channel</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.green"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>ID of the blue Channel</ion-label>
+            <ion-input [(ngModel)]="channel.typedef.blue"></ion-input>
+        </ion-item>
     </ion-list>
 </ion-content>
 <ion-toolbar primary position="bottom">
