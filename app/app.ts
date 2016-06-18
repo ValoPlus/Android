@@ -7,20 +7,26 @@ import {Component} from "@angular/core";
 
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+    template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
-  rootPage: any = StartPage;
+    rootPage:any = StartPage;
 
-  constructor(platform: Platform, datastoreService: DatastoreService, store:StoreService) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      StatusBar.styleDefault();
-      datastoreService.initDB();
-      store.loadControllerFromDb();
-    });
-  }
+    constructor(platform:Platform, datastoreService:DatastoreService, store:StoreService) {
+        platform.ready().then(() => {
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            StatusBar.styleDefault();
+            datastoreService.initDB();
+            store.loadControllerFromDb();
+        });
+    }
 }
 
-ionicBootstrap(MyApp, [StoreService, DatastoreService],  {});
+ionicBootstrap(MyApp, [StoreService, DatastoreService], {
+    platforms: {
+        ios: {
+            statusbarPadding: true
+        }
+    }
+});
