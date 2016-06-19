@@ -1,11 +1,11 @@
+import { Injectable } from '@angular/core';
+import { Device } from 'ionic-native/dist/index';
+
 /**
  * Service to access information about the device running on.
  *
  * Created by tom on 18.06.16.
  */
-import { Injectable } from '@angular/core';
-import { Device } from 'ionic-native/dist/index';
-
 @Injectable()
 export class DeviceService implements DeviceService {
     public getDeviceId():String {
