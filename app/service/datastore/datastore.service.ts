@@ -1,12 +1,13 @@
 import {Injectable} from "@angular/core";
 import {Connection} from "../../domain/Connection";
 import {Device} from "../../domain/Controller";
-//noinspection TypeScriptUnresolvedFunction
+
+declare function require(a)
+var PouchDB = require("pouchdb")
+
 /**
  * Created by tom on 28.05.16.
  */
-
-let PouchDB = require('pouchdb');
 
 @Injectable()
 export class DatastoreService {

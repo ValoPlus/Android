@@ -57,6 +57,6 @@ export class StoreService {
             device.channel.forEach(channel => {
                 channel.state = new State();
             });
-        })
+        });
     }
 }

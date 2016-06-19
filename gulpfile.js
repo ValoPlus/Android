@@ -35,38 +35,66 @@ var copyScripts = require('ionic-gulp-scripts-copy');
 
 var isRelease = argv.indexOf('--release') > -1;
 
-gulp.task('watch', ['clean'], function(done){
-  runSequence(
-    ['sass', 'html', 'fonts', 'scripts'],
-    function(){
-      gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
-      gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
-      buildBrowserify({ watch: true }).on('end', done);
-    }
-  );
+gulp.task('watch', ['clean'], function (done) {
+    runSequence(
+        ['sass', 'html', 'fonts', 'scripts'],
+        function () {
+            gulpWatch('app/**/*.scss', function () {
+                gulp.start('sass');
+            });
+            gulpWatch('app/**/*.html', function () {
+                gulp.start('html');
+            });
+            buildBrowserify({watch: true}).on('end', done);
+        }
+    );
 });
 
-gulp.task('build', ['clean'], function(done){
-  runSequence(
-    ['sass', 'html', 'fonts', 'scripts'],
-    function(){
-      buildBrowserify({
-        minify: isRelease,
-        browserifyOptions: {
-          debug: !isRelease
-        },
-        uglifyOptions: {
-          mangle: false
+var typedoc = require("gulp-typedoc");
+gulp.task("typedoc", function() {
+    return gulp
+        .src(["app/**/*.ts"])
+        .pipe(typedoc({
+            module: "commonjs",
+            target: "es5",
+            out: "docs/",
+            excludeExternals: true,
+            experimentalDecorators: true,
+            ignoreCompilerErrors: true,
+            emitDecoratorMetadata: true,
+            name: "Valo+ App"
+        }))
+        ;
+});
+
+gulp.task('unit-test', function (done) {
+    runSequence(
+        ['lint', 'html'],
+        'karma',
+        done);
+});
+
+gulp.task('build', ['clean'], function (done) {
+    runSequence(
+        ['sass', 'html', 'fonts', 'scripts'],
+        function () {
+            buildBrowserify({
+                minify: isRelease,
+                browserifyOptions: {
+                    debug: !isRelease
+                },
+                uglifyOptions: {
+                    mangle: false
+                }
+            }).on('end', done);
         }
-      }).on('end', done);
-    }
-  );
+    );
 });
 
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
 gulp.task('scripts', copyScripts);
-gulp.task('clean', function(){
-  return del('www/build');
+gulp.task('clean', function () {
+    return del('www/build');
 });
