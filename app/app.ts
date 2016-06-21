@@ -5,6 +5,8 @@ import {StoreService} from "./service/store.service";
 import {DatastoreService} from "./service/datastore/datastore.service";
 import {Component} from "@angular/core";
 import {DeviceService} from './service/device/device.service';
+import {AccessService} from "./service/access/access.service";
+import {ConnectionService} from "./service/connection/connection.service";
 
 
 @Component({
@@ -24,7 +26,7 @@ export class MyApp {
     }
 }
 
-ionicBootstrap(MyApp, [StoreService, DatastoreService, DeviceService], {
+ionicBootstrap(MyApp, [StoreService, DatastoreService, DeviceService, AccessService, ConnectionService], {
     platforms: {
         ios: {
             statusbarPadding: true

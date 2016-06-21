@@ -9,7 +9,7 @@ import {Doc} from "../domain/Doc";
  */
 @Injectable()
 export class StoreService {
-    private controller:Array<Device>;
+    public controller:Array<Device>;
 
     constructor(private datastore:DatastoreService) {
         this.controller = [];
