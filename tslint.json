@@ -14,9 +14,8 @@
     "interface-name": [true, "never-prefix"],
     "jsdoc-format": true,
     "label-position": true,
-    "label-undefined": true,
     "max-line-length": true,
-    "member-access": [true, "check-accessor", "check-constructor"],
+    "member-access": false,
     "member-ordering": [
       true, "public-before-private", "static-before-instance",
       "variables-before-functions"

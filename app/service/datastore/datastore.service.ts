@@ -2,8 +2,8 @@ import {Injectable} from "@angular/core";
 import {Connection} from "../../domain/Connection";
 import {Device} from "../../domain/Controller";
 
-declare function require(a)
-var PouchDB = require("pouchdb")
+declare function require(a);
+var PouchDB = require("pouchdb");
 
 /**
  * Created by tom on 28.05.16.
@@ -54,7 +54,7 @@ export class DatastoreService {
             doc.ip = connection.ip;
             doc.key = connection.key;
             return this._dbLastConnection.put(doc);
-        }).catch(error => {
+        }).catch(() => {
             this._dbLastConnection.put(connection);
         });
     }

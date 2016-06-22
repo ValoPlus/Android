@@ -65,7 +65,7 @@ export class ConnectionService {
     saveChannel(ip:string, channel:Channel):Observable<string> {
         return this.http.post(this.url(ip, this.channel), JSON.stringify(channel), this.options)
             .map(this.extractDatastring)
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
     updateChannel(ip:string, channel:Channel):Observable<Channel[]> {

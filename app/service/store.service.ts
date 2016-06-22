@@ -11,7 +11,10 @@ import {Doc} from "../domain/Doc";
 export class StoreService {
     public controller:Array<Device>;
 
-    constructor(private datastore:DatastoreService) {
+    private datastore:DatastoreService;
+
+    constructor(datastore:DatastoreService) {
+        this.datastore = datastore;
         this.controller = [];
     }
 
