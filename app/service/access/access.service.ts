@@ -24,11 +24,11 @@ export class AccessService {
      * @param channel
      * @param device
      */
-    saveChannelInDevice(channel:Channel, device:Device):Observable<string> {
+    saveChannelInDevice(channel:Channel, device:Device):Observable<void> {
         return this.con.saveChannel(device.ip, channel).map(
-            res => this.store.updateDevice(device)
-        ).map(
             res => device.channel.push(channel)
+        ).map(
+            res => this.store.updateDevice(device)
         )
     }
 
@@ -41,5 +41,17 @@ export class AccessService {
 
     }
 
-
+    /**
+     * Deletes the given channel in the device.
+     * @param channel
+     * @param device
+     * @returns {Observable<R>} The processable Observable.
+     */
+    deleteChannelInDevice(channel:Channel, device:Device):Observable<void> {
+        return this.con.deleteChannel(device.ip, channel.name).map(
+            () => device.channel.splice(device.channel.indexOf(channel) ,1)
+        ).map(
+            () => this.store.updateDevice(device)
+        )
+    }
 }

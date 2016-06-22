@@ -8,8 +8,8 @@
     </ion-buttons>
 </ion-navbar>
 <ion-content>
-    <ion-list>
-        <ion-item-sliding *ngFor="let actual of store.controller; let i = index">
+    <ion-card *ngFor="let actual of store.controller; let i = index">
+
             <ion-item>
                 <ion-label (click)="clickDevice(actual)">
                     <h2>{{ actual.name }}</h2>
@@ -17,12 +17,5 @@
                 </ion-label>
                 <ion-toggle secondary checked="false" [ngModel]="getActive(actual) == actual.channel.length"></ion-toggle>
             </ion-item>
-            <ion-item-options>
-                <button danger (click)="clickDelete(i)">
-                    <ion-icon name="trash"></ion-icon>
-                    Delete
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
+    </ion-card>
 </ion-content>

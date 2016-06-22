@@ -18,7 +18,11 @@ export class DatastoreService {
         this._dbDevice = new PouchDB('device', {adapter: 'websql'});
         this._dbLastConnection = new PouchDB('lastConnection', {adapter: 'websql'});
     }
-    
+
+    reset() {
+        new PouchDB('device', {adapter: 'websql'}).destroy('', (err) => console.log(err));
+    }
+
     saveDevice(device:Device) {
         this._dbDevice.post(device).then(doc => {
             device._id = doc.id;
@@ -34,7 +38,7 @@ export class DatastoreService {
             alert(error);
         });
     }
-    
+
     removeDevice(id:string, rev:String) {
         this._dbDevice.remove(id, rev);
     }
@@ -55,11 +59,13 @@ export class DatastoreService {
         });
     }
 
-    getAll(forEachCallback:(Device) => void) {
+    getAll(forEachCallback:(Device) => void, finalCallback?:() => void) {
         return this._dbDevice.allDocs({include_docs: true}).then(result => {
             result.rows.forEach(device => {
                 forEachCallback(device.doc);
-            })
+            });
+            if (finalCallback != null)
+                finalCallback();
         });
     }
 }

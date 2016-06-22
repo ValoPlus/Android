@@ -8,6 +8,7 @@ import {DatastoreService} from "../../service/datastore/datastore.service";
 import {Connection} from "../../domain/Connection";
 import {ErrorHandler} from "../abstract/ErrorHandler";
 import {Component} from "@angular/core";
+import {DeviceService} from "../../service/device/device.service";
 /**
  * Created by tom on 23.05.16.
  */
@@ -21,12 +22,16 @@ export class InitWizzardPage extends ErrorHandler {
     public registrationResponse:RegistrationResponse;
     public ip:string = 'test.valoplus.de';
 
+    private device:DeviceService;
+
     constructor(private viewCtrl:ViewController,
                 private connectionService:ConnectionService,
                 nav:NavController,
                 private store:StoreService,
-                private datastoreService:DatastoreService) {
+                private datastoreService:DatastoreService,
+                device:DeviceService) {
         super(nav);
+        this.device = device;
         this.registrationRequest = new RegistrationRequest();
         datastoreService.getLastConnection(last => {
             if (last != null) {
@@ -37,7 +42,7 @@ export class InitWizzardPage extends ErrorHandler {
     }
 
     clickConnect() {
-        this.registrationRequest.clientId = 'test';
+        this.registrationRequest.clientId = this.device.getDeviceId();
         this.connectionService.requestRegistration(this.registrationRequest, this.ip).subscribe(
             result => this.registrationResponse = result,
             error => super.handleErrorString

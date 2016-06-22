@@ -9,18 +9,25 @@ import {PopoverCallback} from "../../util/PopoverCallback";
 import {SettingsWizardPage} from "../connect/settings.wizard.page";
 import {StoreService} from "../../service/store.service";
 import {StartPage} from "../start/start";
+import {VpColorpickerComponent} from "./channel/colorpicker.component";
 /**
  * Created by tom on 23.05.16.
  */
 
 @Component({
-    templateUrl: 'build/pages/controller/controller.page.html'
+    templateUrl: 'build/pages/controller/controller.page.html',
+    directives: [VpColorpickerComponent]
 })
 export class ControllerPage {
     private device:Device;
 
     constructor(params:NavParams, private nav:NavController, private store:StoreService) {
         this.device = params.data.device;
+    }
+
+    toggleCp(event, cp:VpColorpickerComponent) {
+        if (event.target.className != 'button-inner')
+            cp.toggle();
     }
 
     clickAddChannel() {

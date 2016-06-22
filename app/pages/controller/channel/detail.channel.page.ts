@@ -9,6 +9,10 @@ import {Component} from "@angular/core";
 import {ColorpickerPage} from "./colorpicker.page";
 import {State} from "../../../domain/channel/State";
 import {DevicePopoverComponent} from "./channel.popover";
+import {PopoverCallback} from "../../../util/PopoverCallback";
+import {StartPage} from "../../start/start";
+import {SettingsWizardPage} from "../../connect/settings.wizard.page";
+import {AccessService} from "../../../service/access/access.service";
 
 @Component({
     templateUrl: 'build/pages/controller/channel/detail.channel.page.html',
@@ -17,9 +21,12 @@ export class DetailChannelPage {
     private device:Device;
     channel:Channel;
 
-    constructor(params:NavParams, private nav:NavController) {
+    private accessService:AccessService;
+
+    constructor(params:NavParams, private nav:NavController, accessService:AccessService) {
         this.device = params.data.device;
         this.channel = params.data.channel;
+        this.accessService = accessService;
     }
     
     clickColor() {
@@ -41,7 +48,18 @@ export class DetailChannelPage {
     }
 
     presentPopover(myEvent) {
-        let popover = Popover.create(DevicePopoverComponent);
+        let popover = Popover.create(DevicePopoverComponent, {
+            callback: <PopoverCallback> {
+                onClickDelete: () => {
+                    this.accessService.deleteChannelInDevice(this.channel, this.device).subscribe(
+                        () => this.nav.setRoot(StartPage)
+                    )
+                },
+                onClickEdit: () => {
+
+                }
+            }
+        });
         this.nav.present(popover, {
             ev: myEvent
         });

@@ -6,26 +6,34 @@
         </button>
     </ion-buttons>
 </ion-navbar>
+<button fab fab-bottom fab-right (click)="clickAddChannel()" style="z-index: 100;">
+    <ion-icon name="add"></ion-icon>
+</button>
 <ion-content>
-    <button fab fab-bottom fab-right (click)="clickAddChannel()">
-        <ion-icon name="add"></ion-icon>
-    </button>
-    <ion-list>
-        <ion-item-sliding *ngFor="let actual of device.channel">
-            <ion-item>
-                <ion-label (click)="clickChannel(actual)">
-                    <h2>{{ actual.name }}
-                        <small> ({{ actual.type }})</small>
-                    </h2>
-                </ion-label>
-                <ion-toggle secondary checked="false" [ngModel]="actual.state.active" (ionChange)="toggle(actual)"></ion-toggle>
-            </ion-item>
-            <ion-item-options>
-                <button danger (click)="clickDelete(actual)">
-                    <ion-icon name="trash"></ion-icon>
-                    Delete
+    <ion-card *ngFor="let actual of device.channel">
+
+        <ion-card-header (click)="toggleCp($event, cp)">
+            <span style="width: 100%">
+                {{ actual.name }}
+                <small> ({{ actual.type }})</small>
+            </span>
+            <ion-toggle secondary checked="false" [ngModel]="actual.state.active" (ionChange)="toggle(actual)"
+                        style="display: inline-block; float: right;"></ion-toggle>
+        </ion-card-header>
+
+        <ion-card-content style="padding: 0">
+            <vp-colorpicker [channel]="actual" #cp></vp-colorpicker>
+        </ion-card-content>
+        <ion-row no-padding *ngIf="cp.isActive()">
+            <ion-col></ion-col>
+            <ion-col></ion-col>
+            <ion-col>
+                <button clear="" small="" class="disable-hover button button-clear button-small button-icon-left" (click)="clickChannel(actual)"><span
+                        class="button-inner">Details <ion-icon name="arrow-forward" style="margin-left: 5px;"></ion-icon></span>
+                    <ion-button-effect></ion-button-effect>
                 </button>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
 </ion-content>

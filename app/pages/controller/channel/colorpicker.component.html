@@ -1,0 +1,26 @@
+<ion-list *ngIf="visible">
+    <div *ngIf="channel.type != 'LED_STRIP'">
+        <ion-item [style.background]="getColor()" class="no-border"></ion-item>
+        <ion-item>
+            <ion-range min="0" max="255" [(ngModel)]="channel.state.color.r">
+                <ion-label range-left>R</ion-label>
+            </ion-range>
+        </ion-item>
+        <ion-item>
+            <ion-range min="0" max="255" [(ngModel)]="channel.state.color.g">
+                <ion-label range-left>G</ion-label>
+            </ion-range>
+        </ion-item>
+        <ion-item>
+            <ion-range min="0" max="255" [(ngModel)]="channel.state.color.b">
+                <ion-label range-left>B</ion-label>
+            </ion-range>
+        </ion-item>
+    </div>
+    <ion-item>
+        <ion-range min="0" max="100" step="2" [(ngModel)]="channel.state.brightness">
+            <ion-icon small range-left name="sunny"></ion-icon>
+            <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+</ion-list>

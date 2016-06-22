@@ -22,13 +22,13 @@ export class StoreService {
      */
     add(device:Device) {
         const exist = this.controller.find(actual => actual.name == device.name);
-        if(exist != null) {
+        if (exist != null) {
             throw new Error(`A Device with the name ${exist.name} already exists.`);
         }
         device.channel.forEach(channel => {
             channel.state = new State();
         });
-        
+
         this.datastore.saveDevice(device);
         this.controller.push(device);
     }
@@ -51,12 +51,11 @@ export class StoreService {
         this.datastore.removeDevice(doc._id, doc._rev);
     }
 
-    loadControllerFromDb() {
-        this.datastore.getAll(device => this.controller.push(device));
-        this.controller.forEach(device => {
-            device.channel.forEach(channel => {
-                channel.state = new State();
-            });
-        });
+    loadControllerFromDb(callback?:() => void) {
+        this.controller = [];
+        if (callback == null) {
+            this.datastore.getAll(device => this.controller.push(device));
+        } else
+            this.datastore.getAll(device => this.controller.push(device), () => callback());
     }
 }

@@ -9,7 +9,7 @@ export class Device extends Doc{
     public ip:string;
     public channel:Channel[];
 
-    constructor(name?:string, ip?:string, channel?:Channel[]) {
+    constructor(name:string, ip:string, channel:Channel[]) {
         super();
         this.name = name;
         this.ip = ip;

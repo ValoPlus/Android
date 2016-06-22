@@ -57,7 +57,7 @@ export class ConnectionService {
     }
 
     getChannel(ip:string):Observable<Channel[]> {
-        return this.http.get(this.url(ip, this.channel) + '?clientId=test', this.options)
+        return this.http.get(this.url(ip, this.channel) + '?clientId=devuuid', this.options)
             .map(this.extractData)
             .catch(this.handleError)
     }
@@ -75,7 +75,7 @@ export class ConnectionService {
     }
 
     deleteChannel(ip:string, name:string):Observable<string> {
-        return this.http.delete(this.url(ip, this.channel)+ '?channelName = ' + name, this.options)
+        return this.http.delete(this.url(ip, this.channel)+ '?channelName=' + name, this.options)
             .map(this.extractDatastring)
             .catch(this.handleError)
     }
