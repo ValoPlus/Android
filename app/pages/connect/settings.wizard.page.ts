@@ -14,17 +14,26 @@ export class SettingsWizardPage {
     private wlan:Wlan = new Wlan();
     private device:Device;
 
+    private oldName:string;
+
+    private nav:NavController;
+    private connectionService:ConnectionService;
+    private store:StoreService;
+
     // TODO detect wlan change!
 
-    constructor(public nav:NavController,
-                private connectionService:ConnectionService,
-                private store:StoreService,
-                params:NavParams) {
+
+    constructor(nav:NavController, connectionService:ConnectionService, store:StoreService, params:NavParams) {
+        this.nav = nav;
+        this.connectionService = connectionService;
+        this.store = store;
+
         this.device = params.data.device;
         this.connectionService.getWlan(this.device.ip).subscribe(
             wlan => this.wlan = wlan,
             this.error
         )
+        this.oldName = this.device.name;
     }
 
     save() {
@@ -39,11 +48,12 @@ export class SettingsWizardPage {
         );
     }
 
-    private error(error:string) {
-        this.nav.present(Toast.create({message: error, duration: 3000}));
+    public close() {
+        this.device.name = this.oldName;
+        this.nav.setRoot(StartPage);
     }
 
-    close() {
-        this.nav.setRoot(StartPage);
+    private error(error:string) {
+        this.nav.present(Toast.create({message: error, duration: 3000}));
     }
 }
