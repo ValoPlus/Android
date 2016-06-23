@@ -1,21 +1,22 @@
 <ion-navbar primary *navbar>
-    <ion-title>{{ 'START.TITLE' | translate }}</ion-title>
+    <ion-title>
+        <vp-translate key="START.TITLE"></vp-translate>
+    </ion-title>
     <ion-buttons end>
         <button (click)="clickAddDevice()">
             <ion-icon name="add"></ion-icon>
-            {{ 'START.ADD_DEVICE' | translate }}
+            <vp-translate key="START.ADD_DEVICE"></vp-translate>
         </button>
     </ion-buttons>
 </ion-navbar>
 <ion-content>
     <ion-card *ngFor="let actual of store.controller; let i = index">
-
-            <ion-item>
-                <ion-label (click)="clickDevice(actual)">
-                    <h2>{{ actual.name }}</h2>
-                    <p>{{ getActive(actual) }} active / {{ actual.channel.length }} configured</p>
-                </ion-label>
-                <ion-toggle secondary checked="false" [ngModel]="getActive(actual) == actual.channel.length"></ion-toggle>
-            </ion-item>
+        <ion-item>
+            <ion-label (click)="clickDevice(actual)">
+                <h2>{{ actual.name }}</h2>
+                <p>{{ getActive(actual) }} active / {{ actual.channel.length }} configured</p>
+            </ion-label>
+            <ion-toggle secondary checked="false" [ngModel]="getActive(actual) == actual.channel.length"></ion-toggle>
+        </ion-item>
     </ion-card>
 </ion-content>

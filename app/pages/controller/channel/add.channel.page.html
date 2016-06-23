@@ -1,18 +1,30 @@
 <ion-navbar primary *navbar>
-    <ion-title>Add Channel to {{ device.name }}</ion-title>
+    <ion-title>
+        <vp-translate key="ADD_CHANNEL.TITLE" [replace]="[device.name]"></vp-translate>
+    </ion-title>
 </ion-navbar>
 <ion-content>
     <ion-list>
         <ion-item>
-            <ion-label stacked>Name for the channel</ion-label>
+            <ion-label stacked>
+                <vp-translate key="ADD_CHANNEL.NAME"></vp-translate>
+            </ion-label>
             <ion-input [(ngModel)]="channel.name"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label stacked>Type of the channel</ion-label>
+            <ion-label stacked>
+                <vp-translate key="ADD_CHANNEL.NAME"></vp-translate>
+            </ion-label>
             <ion-select [(ngModel)]="channel.type">
-                <ion-option [value]="channelTypes.WS2812">WS2812</ion-option>
-                <ion-option [value]="channelTypes.LED_STRIP_RGB">RGB Led Leiste</ion-option>
-                <ion-option [value]="channelTypes.LED_STRIP">Einfahrbige LED Leiste</ion-option>
+                <ion-option [value]="channelTypes.WS2812">
+                    <vp-translate key="GLOBAL.WS2812"></vp-translate>
+                </ion-option>
+                <ion-option [value]="channelTypes.LED_STRIP_RGB">
+                    <vp-translate key="GLOBAL.LED_STRIP_RGB"></vp-translate>
+                </ion-option>
+                <ion-option [value]="channelTypes.LED_STRIP">
+                    <vp-translate key="GLOBAL.LED_STRIP"></vp-translate>
+                </ion-option>
             </ion-select>
         </ion-item>
     </ion-list>

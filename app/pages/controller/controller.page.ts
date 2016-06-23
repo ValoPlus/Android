@@ -10,6 +10,7 @@ import {SettingsWizardPage} from "../connect/settings.wizard.page";
 import {StoreService} from "../../service/store.service";
 import {StartPage} from "../start/start";
 import {VpColorpickerComponent} from "./channel/colorpicker.component";
+import { VpTranslateComponent } from '../global/translate.component';
 /**
  * Created by tom on 23.05.16.
  */

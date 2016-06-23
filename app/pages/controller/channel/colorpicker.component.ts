@@ -13,7 +13,6 @@ export class VpColorpickerComponent {
     private visible = false;
 
     toggle() {
-        console.log("...")
         this.visible = !this.visible;
     }
 

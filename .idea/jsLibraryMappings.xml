@@ -3,5 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{valoplus node_modules}" />
     <file url="PROJECT" libraries="{valoplus, website_shared}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
   </component>
 </project>

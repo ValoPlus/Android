@@ -5,13 +5,13 @@ import { ControllerPage } from "../controller/controller.page";
 import { Component } from "@angular/core";
 import { Device } from "../../domain/Controller";
 import { TranslatePipe } from 'ng2-translate/ng2-translate';
+import { VpTranslateComponent } from '../global/translate.component';
 /**
  * Created by tom on 22.05.16.
  */
 
 @Component({
     templateUrl: 'build/pages/start/start.html',
-    pipes: [TranslatePipe]
 })
 export class StartPage {
     private nav:NavController;

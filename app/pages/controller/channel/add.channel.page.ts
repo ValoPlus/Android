@@ -1,10 +1,9 @@
-import {NavParams, ViewController, NavController, Toast} from "ionic-angular/index";
-import {Device} from "../../../domain/Controller";
-import {ConnectionService} from "../../../service/connection/connection.service";
-import {Channel} from "../../../domain/channel/Channel";
-import {ChannelTypes} from "../../../domain/channel/ChannelTypes";
-import {Component} from "@angular/core";
-import {AccessService} from "../../../service/access/access.service";
+import { NavParams, ViewController, NavController, Toast } from 'ionic-angular/index';
+import { Device } from '../../../domain/Controller';
+import { Channel } from '../../../domain/channel/Channel';
+import { ChannelTypes } from '../../../domain/channel/ChannelTypes';
+import { Component } from '@angular/core';
+import { AccessService } from '../../../service/access/access.service';
 
 @Component({
     templateUrl: 'build/pages/controller/channel/add.channel.page.html',

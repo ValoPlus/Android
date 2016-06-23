@@ -5,8 +5,9 @@ import { TRANSLATE_PROVIDERS, TranslateService, TranslateStaticLoader, Translate
 import { StoreService } from './service/store.service';
 import { DatastoreService } from './service/datastore/datastore.service';
 import { StartPage } from './pages/start/start';
-import { provide, Component } from '@angular/core';
+import { provide, Component, PLATFORM_DIRECTIVES } from '@angular/core';
 import { VALO_PLUS_PROVIDERS } from './service/services';
+import { VpTranslateComponent } from './pages/global/translate.component';
 
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>',
@@ -23,13 +24,13 @@ export class MyApp {
 
     constructor(platform:Platform, datastoreService:DatastoreService, store:StoreService, translate:TranslateService) {
         platform.ready().then(() => {
+            this.initTranslateProvider(translate);
+
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
             datastoreService.initDB();
             store.loadControllerFromDb();
-
-            this.initTranslateProvider(translate);
         });
     }
 
@@ -45,7 +46,11 @@ export class MyApp {
     }
 }
 
-ionicBootstrap(MyApp, [VALO_PLUS_PROVIDERS, TRANSLATE_PROVIDERS], {
+ionicBootstrap(MyApp, [
+    VALO_PLUS_PROVIDERS,
+    TRANSLATE_PROVIDERS,
+    provide(PLATFORM_DIRECTIVES, { useValue: VpTranslateComponent, multi: true })
+    ], {
     platforms: {
         ios: {
             statusbarPadding: true
